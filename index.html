@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carousel Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slidecarousel.css">
+    <!--<script type="text/javascript" src ="jquery-1.11.1.min.js"></script> -->
+    <script src="slidecarousel.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  	
+  	<div class="che-slideshow">
+  		<ol class="slideshow-indicator-container">
+  			<li class="slideshow-indicator">
+  			</li>
+  			<li class="slideshow-indicator inactive-indicator" >
+  			</li>
+  			<li class="slideshow-indicator inactive-indicator" >
+  			</li>
+  			<li class="slideshow-indicator inactive-indicator" >
+  			</li>
+  		</ol>
+      <div class="slideshow-left-control slideshow-control">
+    		<span><i class="fa fa-2x fa-arrow-left slideshow-left-arrow slideshow-arrow" style="color:white;top:50%;"></i></span>
+      </div>
+      <div class="slideshow-right-control slideshow-control">
+             
+        
+        <span><i class="fa fa-2x fa-arrow-right slideshow-right-arrow slideshow-arrow" style="color:white;"></i></span>
+            
+      </div>
+  		<div class="che-slideshow-slide">
+  			<img src="chicago.jpg" />
+  			<div class="che-slideshow-caption">
+                  <h3>Thankyou Chicago!!</h3>
+                  
+  			</div>
+  		</div>
+  		<div class="che-slideshow-slide inactive">
+            <img src="new-york.jpg" />
+  			<div class="che-slideshow-caption">
+                <h3>Thankyou New York!!</h3>
+  				
+  			</div>
+  		</div>
+  		<div class="che-slideshow-slide inactive">
+  			<img src="los-angeles.jpg" />
+  			<div class="che-slideshow-caption">
+                <h3>Thankyou Los Angeles!!</h3>
+  			</div>
+  		</div>
+  		<div class="che-slideshow-slide inactive">
+  			<img src="chicago.jpg" />
+  			<div class="che-slideshow-caption">
+  				<h3>Thankyou Chicago!!</h3>
+  			</div>
+  		</div>
+  	</div>
+    <script>
+    // add event listeners
+    (function () {
+      var prevArrow = document.getElementsByClassName('slideshow-left-control')[0];
+      var nextArrow = document.getElementsByClassName('slideshow-right-control')[0];
+
+      prevArrow.addEventListener('click', CHESLIDESHOW.prevSlide);
+      nextArrow.addEventListener('click', CHESLIDESHOW.nextSlide);
+    })();
+    </script>
+  </body>
+</html>
